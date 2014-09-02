@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 from django.core.cache import cache
 from django.utils import timezone
 
-import utils
+import spirit.tests.utils as utils
 
 from spirit.models.topic import Topic
 

@@ -1,5 +1,11 @@
 # Spirit [![Build Status](https://travis-ci.org/nitely/Spirit.png)](https://travis-ci.org/nitely/Spirit) [![Coverage Status](https://coveralls.io/repos/nitely/Spirit/badge.png)](https://coveralls.io/r/nitely/Spirit)
 
+**THIS IS AN EXPERIMENTAL PYTHON 3/DJANGO 1.7 FORK OF `nitely/Spirit`**
+        Progress:
+        Ran 288 tests in 20.560s
+
+        FAILED (failures=2, errors=87)
+
 Spirit is a Python based forum built using the Django framework.
 
 To see it in action, please visit [The Spirit Project](http://spirit-project.com/).

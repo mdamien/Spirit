@@ -2,7 +2,7 @@
 
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 from spirit.utils.decorators import administrator_required
 

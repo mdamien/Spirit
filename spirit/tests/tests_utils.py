@@ -22,7 +22,7 @@ from django.core import mail
 from django.template.loader import render_to_string
 from django.core.exceptions import PermissionDenied
 from django.contrib import messages
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import utc
 from django.utils.http import urlunquote
 
@@ -36,7 +36,7 @@ from spirit.utils.user import email
 
 from spirit import utils as spirit_utils
 from spirit.templatetags.tags.utils import time as ttags_utils
-import utils as test_utils
+import spirit.tests.utils as test_utils
 from spirit.utils.markdown import quotify
 from spirit.templatetags.tags.utils.messages import render_messages
 

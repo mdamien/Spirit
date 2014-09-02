@@ -3,7 +3,7 @@
 import functools
 
 from django.contrib import messages
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 from .ratelimit import RateLimit
 

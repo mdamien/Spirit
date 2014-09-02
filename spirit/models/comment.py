@@ -15,7 +15,7 @@ from ..signals.comment import comment_post_update
 
 COMMENT_MAX_LEN = 3000  # changing this needs migration
 
-COMMENT, MOVED, CLOSED, UNCLOSED, PINNED, UNPINNED = xrange(6)
+COMMENT, MOVED, CLOSED, UNCLOSED, PINNED, UNPINNED = range(6)
 
 ACTION = (
     (COMMENT, _("comment")),

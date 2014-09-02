@@ -2,13 +2,13 @@
 
 import os
 import json
-from StringIO import StringIO
+from io import StringIO
 
 from django.test import TestCase, RequestFactory
 from django.core.cache import cache
 from django.core.urlresolvers import reverse
 from django.template import Template, Context
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.models import User as UserModel
 from django.contrib.auth import get_user_model
@@ -16,7 +16,7 @@ from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test.utils import override_settings
 
-import utils
+import spirit.tests.utils as utils
 
 from spirit.models.comment import Comment,\
     comment_like_post_create, comment_like_post_delete,\

@@ -8,10 +8,10 @@ from django.template import Template, Context, TemplateSyntaxError
 from django.core.cache import cache
 from django.contrib.auth import get_user_model
 from django.core import mail
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 
-import utils
+import spirit.tests.utils as utils
 
 from spirit.forms.user import RegistrationForm, UserProfileForm, EmailChangeForm, ResendActivationForm
 from spirit.backends.user import EmailAuthBackend

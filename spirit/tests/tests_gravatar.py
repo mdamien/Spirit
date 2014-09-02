@@ -3,8 +3,7 @@
 from django.test import TestCase
 from django.template import Template, Context, TemplateSyntaxError
 
-import utils
-
+import spirit.tests.utils as utils
 
 class GravatarTemplateTagTests(TestCase):
     def setUp(self):

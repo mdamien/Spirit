@@ -9,7 +9,7 @@ from django.template import Template, Context
 from django.conf import settings
 from django.utils import timezone
 
-import utils
+import spirit.tests.utils as utils
 
 from spirit.models.category import Category
 from spirit.models.topic_private import TopicPrivate

@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 
-import utils
+import spirit.tests.utils as utils
 
 from spirit.models.topic_unread import TopicUnread, topic_viewed, comment_posted
 

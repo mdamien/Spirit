@@ -3,7 +3,7 @@
 from datetime import datetime
 
 from django.template import defaultfilters
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import is_aware, utc
 
 from .. import register

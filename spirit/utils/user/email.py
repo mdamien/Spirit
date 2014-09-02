@@ -5,10 +5,10 @@ import logging
 
 from django.core.mail import EmailMessage
 from django.contrib.sites.models import get_current_site
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.template.loader import render_to_string
 
-from tokens import UserActivationTokenGenerator, UserEmailChangeTokenGenerator
+from .tokens import UserActivationTokenGenerator, UserEmailChangeTokenGenerator
 
 logger = logging.getLogger(__name__)
 
