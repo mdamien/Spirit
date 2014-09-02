@@ -75,7 +75,7 @@ class TopicNotificationViewTest(TestCase):
         # ajax list should behave the same
         response = self.client.get(reverse('spirit:topic-notification-ajax'),
                                    HTTP_X_REQUESTED_WITH='XMLHttpRequest')
-        res = json.loads(response.content)
+        res = json.loads(response.content.decode('utf-8'))
         self.assertEqual(len(res['n']), 1)
 
     def test_topic_notification_list_dont_show_topic_removed_or_no_access(self):
@@ -116,7 +116,7 @@ class TopicNotificationViewTest(TestCase):
         # ajax list should behave the same
         response = self.client.get(reverse('spirit:topic-notification-ajax'),
                                    HTTP_X_REQUESTED_WITH='XMLHttpRequest')
-        res = json.loads(response.content)
+        res = json.loads(response.content.decode('utf-8'))
         self.assertEqual(len(res['n']), 0)
 
     @override_settings(ST_NOTIFICATIONS_PER_PAGE=10)
@@ -145,7 +145,7 @@ class TopicNotificationViewTest(TestCase):
         utils.login(self)
         response = self.client.get(reverse('spirit:topic-notification-ajax'),
                                    HTTP_X_REQUESTED_WITH='XMLHttpRequest')
-        res = json.loads(response.content)
+        res = json.loads(response.content.decode('utf-8'))
         self.assertEqual(len(res['n']), 1)
         expected = {
             'user': self.topic_notification.comment.user.username,
@@ -170,8 +170,8 @@ class TopicNotificationViewTest(TestCase):
         utils.login(self)
         response = self.client.get(reverse('spirit:topic-notification-ajax'),
                                    HTTP_X_REQUESTED_WITH='XMLHttpRequest')
-        res = json.loads(response.content)
-        self.assertGreater(TopicNotification.objects.filter(user=self.user), 1)
+        res = json.loads(response.content.decode('utf-8'))
+        self.assertGreater(TopicNotification.objects.filter(user=self.user).count(), 1)
         self.assertEqual(len(res['n']), 1)
 
     @override_settings(ST_NOTIFICATIONS_PER_PAGE=20)
@@ -181,7 +181,7 @@ class TopicNotificationViewTest(TestCase):
         """
         user = utils.create_user()
 
-        for _ in xrange(10):
+        for _ in range(10):
             topic = utils.create_topic(self.category, user=user)
             comment = utils.create_comment(topic=topic, user=user)
             TopicNotification.objects.create(user=self.user, topic=topic, comment=comment,
@@ -194,7 +194,7 @@ class TopicNotificationViewTest(TestCase):
         utils.login(self)
         response = self.client.get(reverse('spirit:topic-notification-ajax'),
                                    HTTP_X_REQUESTED_WITH='XMLHttpRequest')
-        res = json.loads(response.content)
+        res = json.loads(response.content.decode('utf-8'))
         self.assertFalse(res['n'][0]['is_read'])
         self.assertTrue(res['n'][1]['is_read'])
 

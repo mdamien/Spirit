@@ -2,7 +2,7 @@
 
 import os
 import json
-from io import StringIO
+from io import StringIO, BytesIO
 
 from django.test import TestCase, RequestFactory
 from django.core.cache import cache
@@ -360,13 +360,13 @@ class CommentViewTest(TestCase):
         comment image upload
         """
         utils.login(self)
-        img = StringIO('GIF87a\x01\x00\x01\x00\x80\x01\x00\x00\x00\x00ccc,\x00'
-                       '\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;')
+        img = BytesIO(b'GIF87a\x01\x00\x01\x00\x80\x01\x00\x00\x00\x00ccc,\x00'
+                       b'\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;')
         files = {'image': SimpleUploadedFile('image.gif', img.read(), content_type='image/gif'), }
         response = self.client.post(reverse('spirit:comment-image-upload-ajax'),
                                     HTTP_X_REQUESTED_WITH='XMLHttpRequest',
                                     data=files)
-        res = json.loads(response.content)
+        res = json.loads(response.content.decode('utf-8'))
         self.assertEqual(res['url'], os.path.join(settings.MEDIA_URL, 'spirit', 'images', str(self.user.pk),
                                                   "bf21c3043d749d5598366c26e7e4ab44.gif").replace("\\", "/"))
         os.remove(os.path.join(settings.MEDIA_ROOT, 'spirit', 'images', str(self.user.pk),
@@ -377,14 +377,14 @@ class CommentViewTest(TestCase):
         comment image upload, invalid image
         """
         utils.login(self)
-        image = StringIO('BAD\x02D\x01\x00;')
+        image = BytesIO('BAD\x02D\x01\x00;'.encode('utf-8'))
         image.name = 'image.gif'
         image.content_type = 'image/gif'
         files = {'image': SimpleUploadedFile(image.name, image.read()), }
         response = self.client.post(reverse('spirit:comment-image-upload-ajax'),
                                     HTTP_X_REQUESTED_WITH='XMLHttpRequest',
                                     data=files)
-        res = json.loads(response.content)
+        res = json.loads(response.content.decode('utf-8'))
         self.assertIn('error', res.keys())
         self.assertIn('image', res['error'].keys())
 
@@ -523,9 +523,9 @@ class CommentFormTest(TestCase):
         """
         Image upload
         """
-        content = 'GIF87a\x01\x00\x01\x00\x80\x01\x00\x00\x00\x00ccc,\x00' \
-                  '\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;'
-        img = StringIO(content)
+        content = b'GIF87a\x01\x00\x01\x00\x80\x01\x00\x00\x00\x00ccc,\x00' \
+                  b'\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;'
+        img = BytesIO(content)
         files = {'image': SimpleUploadedFile('image.gif', img.read(), content_type='image/gif'), }
 
         form = CommentImageForm(user=self.user, data={}, files=files)
@@ -549,8 +549,8 @@ class CommentFormTest(TestCase):
         """
         Image upload no extension
         """
-        img = StringIO('GIF87a\x01\x00\x01\x00\x80\x01\x00\x00\x00\x00ccc,\x00'
-                       '\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;')
+        img = BytesIO(b'GIF87a\x01\x00\x01\x00\x80\x01\x00\x00\x00\x00ccc,\x00'
+                       b'\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;')
         files = {'image': SimpleUploadedFile('image', img.read(), content_type='image/gif'), }
         form = CommentImageForm(user=self.user, data={}, files=files)
         self.assertTrue(form.is_valid())
@@ -563,8 +563,8 @@ class CommentFormTest(TestCase):
         """
         Image upload, invalid format
         """
-        img = StringIO('GIF87a\x01\x00\x01\x00\x80\x01\x00\x00\x00\x00ccc,\x00'
-                       '\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;')
+        img = BytesIO(b'GIF87a\x01\x00\x01\x00\x80\x01\x00\x00\x00\x00ccc,\x00'
+                       b'\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02D\x01\x00;')
         # fake png extension
         files = {'image': SimpleUploadedFile('image.png', img.read(), content_type='image/png'), }
         form = CommentImageForm(data={}, files=files)
@@ -574,7 +574,7 @@ class CommentFormTest(TestCase):
         """
         Image upload, bad image
         """
-        img = StringIO('bad\x00;')
+        img = BytesIO(b'bad\x00;')
         files = {'image': SimpleUploadedFile('image.gif', img.read(), content_type='image/gif'), }
         form = CommentImageForm(data={}, files=files)
         self.assertFalse(form.is_valid())
