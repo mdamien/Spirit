@@ -90,7 +90,7 @@ class CommentImageForm(forms.Form):
 
     def save(self):
         image = self.cleaned_data["image"]
-        hash = hashlib.md5(image.read()).hexdigest()
+        hash = hashli.md5(image.read()).hexdigest()
         image.name = u"".join((hash, ".", image.format))
         upload_to = os.path.join('spirit', 'images', str(self.user.pk))
         image.url = os.path.join(settings.MEDIA_URL, upload_to, image.name).replace("\\", "/")

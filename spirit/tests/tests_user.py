@@ -326,7 +326,7 @@ class UserViewTest(TestCase):
         """
         form_data = {'username': self.user.email, 'password': "badpassword"}
         url = reverse('spirit:user-login') + "?next=/path/"
-        for _ in xrange(6):
+        for _ in range(6):
             response = self.client.post(url, form_data)
         self.assertRedirects(response, url, status_code=302)
 
@@ -335,7 +335,7 @@ class UserViewTest(TestCase):
         test rate limit 5/5m
         """
         form_data = {'email': "bademail@bad.com", }
-        for _ in xrange(6):
+        for _ in range(6):
             response = self.client.post(reverse('spirit:password-reset'),
                                         form_data)
         expected_url = reverse("spirit:password-reset")
