@@ -1,0 +1,412 @@
+/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/djconfig/models.py:8: RemovedInDjango19Warning: Model class djconfig.models.Config doesn't declare an explicit app_label and either isn't in an application in INSTALLED_APPS or else was imported before its application was loaded. This will no longer be supported in Django 1.9.
+  class Config(models.Model):
+
+/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/djconfig/config.py:15: RemovedInDjango19Warning: 'get_cache' is deprecated in favor of 'caches'.
+  self._cache = get_cache(BACKEND)
+
+/home/tic/.virtualenvs/fablab/lib/python3.4/importlib/_bootstrap.py:321: RemovedInDjango19Warning: django.utils.importlib will be removed in Django 1.9.
+  return f(*args, **kwds)
+
+.............................F.EEEE............EE.....................................F......ERROR:root:Error updating spirit using default 
+Traceback (most recent call last):
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 221, in handle_label
+    self.update_backend(label, using)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 267, in update_backend
+    do_update(backend, index, qs, start, end, total, self.verbosity)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 89, in do_update
+    backend.update(index, current_qs)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/backends/whoosh_backend.py", line 179, in update
+    doc = index.full_prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 204, in full_prepare
+    self.prepared_data = self.prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 187, in prepare
+    ID: get_identifier(obj),
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/utils/__init__.py", line 33, in default_get_identifier
+    obj_or_string._meta.module_name,
+AttributeError: 'Options' object has no attribute 'module_name'
+EERROR:root:Error updating spirit using default 
+Traceback (most recent call last):
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 221, in handle_label
+    self.update_backend(label, using)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 267, in update_backend
+    do_update(backend, index, qs, start, end, total, self.verbosity)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 89, in do_update
+    backend.update(index, current_qs)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/backends/whoosh_backend.py", line 179, in update
+    doc = index.full_prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 204, in full_prepare
+    self.prepared_data = self.prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 187, in prepare
+    ID: get_identifier(obj),
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/utils/__init__.py", line 33, in default_get_identifier
+    obj_or_string._meta.module_name,
+AttributeError: 'Options' object has no attribute 'module_name'
+EERROR:root:Error updating spirit using default 
+Traceback (most recent call last):
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 221, in handle_label
+    self.update_backend(label, using)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 267, in update_backend
+    do_update(backend, index, qs, start, end, total, self.verbosity)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 89, in do_update
+    backend.update(index, current_qs)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/backends/whoosh_backend.py", line 179, in update
+    doc = index.full_prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 204, in full_prepare
+    self.prepared_data = self.prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 187, in prepare
+    ID: get_identifier(obj),
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/utils/__init__.py", line 33, in default_get_identifier
+    obj_or_string._meta.module_name,
+AttributeError: 'Options' object has no attribute 'module_name'
+EERROR:root:Error updating spirit using default 
+Traceback (most recent call last):
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 221, in handle_label
+    self.update_backend(label, using)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 267, in update_backend
+    do_update(backend, index, qs, start, end, total, self.verbosity)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 89, in do_update
+    backend.update(index, current_qs)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/backends/whoosh_backend.py", line 179, in update
+    doc = index.full_prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 204, in full_prepare
+    self.prepared_data = self.prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 187, in prepare
+    ID: get_identifier(obj),
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/utils/__init__.py", line 33, in default_get_identifier
+    obj_or_string._meta.module_name,
+AttributeError: 'Options' object has no attribute 'module_name'
+E........................................EEE....EE....E.......................................F.............WARNING:py.warnings:/home/tic/repos/spirit-fork/spirit/utils/user/email.py:17: RemovedInDjango19Warning: Please import get_current_site from django.contrib.sites.shortcuts.
+  site = get_current_site(request)
+
+E....................................E..............................................
+======================================================================
+ERROR: test_comment_image_upload (spirit.tests.tests_comment.CommentFormTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_comment.py", line 529, in test_comment_image_upload
+    files = {'image': SimpleUploadedFile('image.gif', img.read(), content_type='image/gif'), }
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/files/uploadedfile.py", line 114, in __init__
+    super(SimpleUploadedFile, self).__init__(BytesIO(content), None, name,
+TypeError: 'str' does not support the buffer interface
+
+======================================================================
+ERROR: test_comment_image_upload_invalid (spirit.tests.tests_comment.CommentFormTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_comment.py", line 578, in test_comment_image_upload_invalid
+    files = {'image': SimpleUploadedFile('image.gif', img.read(), content_type='image/gif'), }
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/files/uploadedfile.py", line 114, in __init__
+    super(SimpleUploadedFile, self).__init__(BytesIO(content), None, name,
+TypeError: 'str' does not support the buffer interface
+
+======================================================================
+ERROR: test_comment_image_upload_no_extension (spirit.tests.tests_comment.CommentFormTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_comment.py", line 554, in test_comment_image_upload_no_extension
+    files = {'image': SimpleUploadedFile('image', img.read(), content_type='image/gif'), }
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/files/uploadedfile.py", line 114, in __init__
+    super(SimpleUploadedFile, self).__init__(BytesIO(content), None, name,
+TypeError: 'str' does not support the buffer interface
+
+======================================================================
+ERROR: test_comment_image_upload_not_allowed_format (spirit.tests.tests_comment.CommentFormTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/test/utils.py", line 281, in inner
+    return test_func(*args, **kwargs)
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_comment.py", line 569, in test_comment_image_upload_not_allowed_format
+    files = {'image': SimpleUploadedFile('image.png', img.read(), content_type='image/png'), }
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/files/uploadedfile.py", line 114, in __init__
+    super(SimpleUploadedFile, self).__init__(BytesIO(content), None, name,
+TypeError: 'str' does not support the buffer interface
+
+======================================================================
+ERROR: test_comment_image_upload (spirit.tests.tests_comment.CommentViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_comment.py", line 365, in test_comment_image_upload
+    files = {'image': SimpleUploadedFile('image.gif', img.read(), content_type='image/gif'), }
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/files/uploadedfile.py", line 114, in __init__
+    super(SimpleUploadedFile, self).__init__(BytesIO(content), None, name,
+TypeError: 'str' does not support the buffer interface
+
+======================================================================
+ERROR: test_comment_image_upload_invalid (spirit.tests.tests_comment.CommentViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_comment.py", line 383, in test_comment_image_upload_invalid
+    files = {'image': SimpleUploadedFile(image.name, image.read()), }
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/files/uploadedfile.py", line 114, in __init__
+    super(SimpleUploadedFile, self).__init__(BytesIO(content), None, name,
+TypeError: 'str' does not support the buffer interface
+
+======================================================================
+ERROR: test_indexing_excludes_private_topics (spirit.tests.tests_search.SearchTopicIndexTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_search.py", line 54, in test_indexing_excludes_private_topics
+    call_command("rebuild_index", interactive=False)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/__init__.py", line 112, in call_command
+    return command.execute(*args, **defaults)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 412, in execute
+    output = self.handle(*args, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/rebuild_index.py", line 16, in handle
+    call_command('update_index', **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/__init__.py", line 112, in call_command
+    return command.execute(*args, **defaults)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 412, in execute
+    output = self.handle(*args, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 195, in handle
+    return super(Command, self).handle(*items, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 579, in handle
+    label_output = self.handle_label(label, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 221, in handle_label
+    self.update_backend(label, using)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 267, in update_backend
+    do_update(backend, index, qs, start, end, total, self.verbosity)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 89, in do_update
+    backend.update(index, current_qs)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/backends/whoosh_backend.py", line 179, in update
+    doc = index.full_prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 204, in full_prepare
+    self.prepared_data = self.prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 187, in prepare
+    ID: get_identifier(obj),
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/utils/__init__.py", line 33, in default_get_identifier
+    obj_or_string._meta.module_name,
+AttributeError: 'Options' object has no attribute 'module_name'
+
+======================================================================
+ERROR: test_advanced_search_detail (spirit.tests.tests_search.SearchViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_search.py", line 75, in setUp
+    call_command("rebuild_index", interactive=False)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/__init__.py", line 112, in call_command
+    return command.execute(*args, **defaults)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 412, in execute
+    output = self.handle(*args, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/rebuild_index.py", line 16, in handle
+    call_command('update_index', **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/__init__.py", line 112, in call_command
+    return command.execute(*args, **defaults)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 412, in execute
+    output = self.handle(*args, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 195, in handle
+    return super(Command, self).handle(*items, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 579, in handle
+    label_output = self.handle_label(label, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 221, in handle_label
+    self.update_backend(label, using)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 267, in update_backend
+    do_update(backend, index, qs, start, end, total, self.verbosity)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 89, in do_update
+    backend.update(index, current_qs)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/backends/whoosh_backend.py", line 179, in update
+    doc = index.full_prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 204, in full_prepare
+    self.prepared_data = self.prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 187, in prepare
+    ID: get_identifier(obj),
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/utils/__init__.py", line 33, in default_get_identifier
+    obj_or_string._meta.module_name,
+AttributeError: 'Options' object has no attribute 'module_name'
+
+======================================================================
+ERROR: test_advanced_search_in_category (spirit.tests.tests_search.SearchViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_search.py", line 75, in setUp
+    call_command("rebuild_index", interactive=False)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/__init__.py", line 112, in call_command
+    return command.execute(*args, **defaults)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 412, in execute
+    output = self.handle(*args, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/rebuild_index.py", line 16, in handle
+    call_command('update_index', **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/__init__.py", line 112, in call_command
+    return command.execute(*args, **defaults)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 412, in execute
+    output = self.handle(*args, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 195, in handle
+    return super(Command, self).handle(*items, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 579, in handle
+    label_output = self.handle_label(label, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 221, in handle_label
+    self.update_backend(label, using)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 267, in update_backend
+    do_update(backend, index, qs, start, end, total, self.verbosity)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 89, in do_update
+    backend.update(index, current_qs)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/backends/whoosh_backend.py", line 179, in update
+    doc = index.full_prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 204, in full_prepare
+    self.prepared_data = self.prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 187, in prepare
+    ID: get_identifier(obj),
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/utils/__init__.py", line 33, in default_get_identifier
+    obj_or_string._meta.module_name,
+AttributeError: 'Options' object has no attribute 'module_name'
+
+======================================================================
+ERROR: test_advanced_search_topics (spirit.tests.tests_search.SearchViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_search.py", line 75, in setUp
+    call_command("rebuild_index", interactive=False)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/__init__.py", line 112, in call_command
+    return command.execute(*args, **defaults)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 412, in execute
+    output = self.handle(*args, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/rebuild_index.py", line 16, in handle
+    call_command('update_index', **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/__init__.py", line 112, in call_command
+    return command.execute(*args, **defaults)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 412, in execute
+    output = self.handle(*args, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 195, in handle
+    return super(Command, self).handle(*items, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/core/management/base.py", line 579, in handle
+    label_output = self.handle_label(label, **options)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 221, in handle_label
+    self.update_backend(label, using)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 267, in update_backend
+    do_update(backend, index, qs, start, end, total, self.verbosity)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/management/commands/update_index.py", line 89, in do_update
+    backend.update(index, current_qs)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/backends/whoosh_backend.py", line 179, in update
+    doc = index.full_prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 204, in full_prepare
+    self.prepared_data = self.prepare(obj)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/indexes.py", line 187, in prepare
+    ID: get_identifier(obj),
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/haystack/utils/__init__.py", line 33, in default_get_identifier
+    obj_or_string._meta.module_name,
+AttributeError: 'Options' object has no attribute 'module_name'
+
+======================================================================
+ERROR: test_topic_notification_ajax (spirit.tests.tests_topic_notification.TopicNotificationViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_topic_notification.py", line 148, in test_topic_notification_ajax
+    res = json.loads(response.content)
+  File "/usr/lib/python3.4/json/__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'bytes'
+
+======================================================================
+ERROR: test_topic_notification_ajax_limit (spirit.tests.tests_topic_notification.TopicNotificationViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_topic_notification.py", line 173, in test_topic_notification_ajax_limit
+    res = json.loads(response.content)
+  File "/usr/lib/python3.4/json/__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'bytes'
+
+======================================================================
+ERROR: test_topic_notification_ajax_order (spirit.tests.tests_topic_notification.TopicNotificationViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/test/utils.py", line 281, in inner
+    return test_func(*args, **kwargs)
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_topic_notification.py", line 184, in test_topic_notification_ajax_order
+    for _ in xrange(10):
+NameError: name 'xrange' is not defined
+
+======================================================================
+ERROR: test_topic_notification_list_dont_show_topic_removed_or_no_access (spirit.tests.tests_topic_notification.TopicNotificationViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_topic_notification.py", line 119, in test_topic_notification_list_dont_show_topic_removed_or_no_access
+    res = json.loads(response.content)
+  File "/usr/lib/python3.4/json/__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'bytes'
+
+======================================================================
+ERROR: test_topic_notification_list_show_private_topic (spirit.tests.tests_topic_notification.TopicNotificationViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_topic_notification.py", line 78, in test_topic_notification_list_show_private_topic
+    res = json.loads(response.content)
+  File "/usr/lib/python3.4/json/__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'bytes'
+
+======================================================================
+ERROR: test_private_create_many (spirit.tests.tests_topic_private.TopicPrivateFormTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_topic_private.py", line 353, in test_private_create_many
+    self.assertItemsEqual(map(repr, privates_saved), map(repr, privates))
+AttributeError: 'TopicPrivateFormTest' object has no attribute 'assertItemsEqual'
+
+======================================================================
+ERROR: test_profile_email_change (spirit.tests.tests_user.UserViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_user.py", line 450, in test_profile_email_change
+    self.assertIn(_("Email change"), mail.outbox[0].subject)
+  File "/usr/lib/python3.4/unittest/case.py", line 1050, in assertIn
+    if member not in container:
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/utils/functional.py", line 135, in __wrapper__
+    return self.__dispatch[t][funcname](res, *args, **kw)
+TypeError: 'in <string>' requires string as left operand, not __proxy__
+
+======================================================================
+ERROR: test_json_response (spirit.tests.tests_utils.UtilsTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_utils.py", line 70, in test_json_response
+    self.assertDictEqual(json.loads(res.content), {})
+  File "/usr/lib/python3.4/json/__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'bytes'
+
+======================================================================
+FAIL: test_category_list_view (spirit.tests.tests_category.CategoryViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_category.py", line 31, in test_category_list_view
+    self.assertQuerysetEqual(response.context['categories'], ['<Category: Uncategorized>', repr(self.category_1), repr(self.category_2)])
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/test/testcases.py", line 881, in assertQuerysetEqual
+    return self.assertEqual(list(items), values, msg=msg)
+AssertionError: Lists differ: ['<Category: Category object>', '<Category: Category o[34 chars]ct>'] != ['<Category: Uncategorized>', '<Category: Category obj[32 chars]ct>']
+
+First differing element 0:
+<Category: Category object>
+<Category: Uncategorized>
+
+- ['<Category: Category object>',
+?              ^      ^^^^^ ^^
+
++ ['<Category: Uncategorized>',
+?              ^^^      ^^ ^
+
+   '<Category: Category object>',
+   '<Category: Category object>']
+
+======================================================================
+FAIL: test_gravatar_url (spirit.tests.tests_gravatar.GravatarTemplateTagTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_gravatar.py", line 20, in test_gravatar_url
+    self.assertEqual(out, "http://www.gravatar.com/avatar/441cf33d0e5b36a95bae87e400783ca4?s=21&r=g&d=identicon")
+AssertionError: 'http[18 chars]m/avatar/441cf33d0e5b36a95bae87e400783ca4?d=identicon&s=21&r=g' != 'http[18 chars]m/avatar/441cf33d0e5b36a95bae87e400783ca4?s=21&r=g&d=identicon'
+
+======================================================================
+FAIL: test_admin_login (spirit.tests.tests_user.UserViewTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tic/repos/spirit-fork/spirit/tests/tests_user.py", line 361, in test_admin_login
+    self.assertRedirects(response, expected_url, status_code=302)
+  File "/home/tic/.virtualenvs/fablab/lib/python3.4/site-packages/django/test/testcases.py", line 300, in assertRedirects
+    (path, redirect_response.status_code, target_status_code))
+AssertionError: 302 != 200 : Couldn't retrieve redirection page '/admin/login/': response code was 302 (expected 200)
+
+----------------------------------------------------------------------
+Ran 288 tests in 24.770s
+
+FAILED (failures=3, errors=18)

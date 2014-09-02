@@ -45,7 +45,7 @@ class CommentBookmarkSignalTest(TestCase):
         self.category = utils.create_category()
         self.topic = utils.create_topic(category=self.category, user=self.user)
 
-        for _ in xrange(settings.ST_COMMENTS_PER_PAGE * 4):  # 4 pages
+        for _ in range(settings.ST_COMMENTS_PER_PAGE * 4):  # 4 pages
             utils.create_comment(user=self.user, topic=self.topic)
 
     def test_comment_bookmark_topic_page_viewed_handler(self):
